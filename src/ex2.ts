@@ -1,90 +1,68 @@
 export function ex2() {
-// 04-03.条件分岐と繰り返し
-// 3.1.1
-// if 文を使って、変数 num の値が正の数なら "正の数", 負の数なら "負の数", 0 なら "ゼロ" を表示してください。
-const num:number = 5;
+  // 算術演算子
+  // 3.1.1
+  // 変数 x = 20 と y = 4 を使って、
+  // それらの加算、減算、乗算、除算、剰余を計算し、
+  // 結果をコンソールに表示してください。
 
-if (num === 0) {
-  console.log("zero");
-} else if (num > 0) {
-  console.log("正の数");
-} else {
-  console.log("negative 負の数");
-};
+  const x: number = 20;
+  const y: number = 4;
+  console.log(x + y);
+  console.log(x - y);
+  console.log(x * y);
+  console.log(x / y);
 
-// 3.1.2
-// for ループを使って、1 から 10 までの数字をコンソールに表示してください。
+  // 3.2.1
+  // ユーザーが入力した 2 つの数値の和と積を計算する関数を作成してください。
+  function sumProduct(a: number, b: number) {
+    return {
+      sum: a + b,
+      product: a * b,
+    };
+  }
+  const result = sumProduct(123, 456);
+  console.log(result.sum);
+  console.log(result.product);
 
-for (let i = 1; i <= 10; i++) {
-  console.log(i);
-};
+  // 3.2.2
+  // 変数 base = 3、exponent = 4 を使って、累乗を計算してください。
 
+  const base: number = 3;
+  const exponent: number = 4;
+  console.log(base ** exponent);
 
-// 3.2.1
-// switch 文を使って、入力された曜日の番号 (1 から 7) に応じた曜日名を表示してください。
-let dayNumber: number = 3;
-switch (dayNumber) {
-  case 1:
-    console.log("Monday");
-    break;
-  case 2:
-    console.log("Tuesday");
-    break;
-  case 3:
-    console.log("Wednesday");
-    break;
-  case 4:
-    console.log("Thursday");
-    break;
-  case 5:
-    console.log("Friday");
-    break;
-  case 6:
-    console.log("Saturday");
-    break;
-  case 7:
-    console.log("Sunday");
-    break;
-  default:
-    console.log("1から7の数字を入力してください");
-    break;
-}
+  // 3.3.1
+  // 2つの数値を受け取り、大きい方を返す関数を作成してください。
+  function getMax(p: number, q: number) {
+    if (p > q) {
+      return p;
+    } else {
+      return q;
+    }
+  }
+  const judgement = getMax(15, 20);
+  console.log(judgement);
 
-// 3.2.2
-// while ループを使って、5 から 1 までカウントダウンを表示してください。
+  const judgement1 = getMax(10, 5);
+  console.log(judgement1);
 
-let count: number = 5;
-while (count >= 1) {
-  console.log(count);
-  count--;
-}
+  // 3.3.2
+  // 10 から 50 までの数値の合計を計算するプログラムを作成してください。
 
+  let sum1: number = 0;
 
-// 3.3.1
-// for-of ループを使って、数値の配列 [3, 6, 9, 12] の合計を計算してください。
+  for (let i = 10; i <= 50; i++) {
+    sum1 += i;
+  }
+  console.log(sum1);
 
-const numArray:number[] = [3, 6, 9, 12];
-let sum:number = 0;
+  let sum2: number = 0;
+  let index: number = 10;
 
-for (const n of numArray) {
-  sum += n;
-}
-console.log("合計:", sum);
-
-// 3.3.2
-// for-in ループを使って、オブジェクト { name: "Bob", age: 30, city: "Tokyo" } のすべてのプロパティと値をコンソールに表示してください。
-
-const obj : {
-  name: String;
-  age: Number;
-  city: String;
-} = {
-  name: "Bob",
-  age: 30,
-  city: "Tokyo"
-}
-for (const key in obj) {
-  console.log(`${key}: ${obj[key as keyof typeof obj]}`);
-}
+  while (index <= 50) {
+    sum2 += index;
+    index++;
+  }
+  console.log(sum2);
 
 }
