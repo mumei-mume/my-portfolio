@@ -85,19 +85,20 @@ fetch(url)
 // new Promise (resolve => resolve("こんにちは"))
 //   .then(res => console.log(res));
 
-// func = async () => {
+// async function func() {
 //   await log(3);
 //   await log(2);
 //   await log(1);
-// };
+// }
 
-// log = (num) => {
-//   return new Promise (resolve => {
-//     setTimeout(() => {
+// function log(num) {
+//   return new Promise(function (resolve) {
+//     setTimeout(function () {
 //       console.log(num);
 //       resolve();
 //     }, 1000);
 //   });
-// };
+// }
 
 // func();
+
