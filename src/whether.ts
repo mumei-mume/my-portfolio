@@ -16,9 +16,11 @@ fetch(url)
     return data.json();
   })
   .then ((json) => {
+    console.log(json);
     drawChart(json);
   });
 
+  
   function drawChart(json: WeatherResponse): void {
   const mydata = {
     labels: json.daily.time,

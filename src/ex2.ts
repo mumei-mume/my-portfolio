@@ -11,6 +11,7 @@ export function ex2() {
   console.log(x - y);
   console.log(x * y);
   console.log(x / y);
+  console.log(x % y);
 
   // 3.2.1
   // ユーザーが入力した 2 つの数値の和と積を計算する関数を作成してください。

@@ -67,4 +67,7 @@ const { name, age } = obj;
 
 console.log(name);
 console.log(age);
+
+console.log(obj.name);
+console.log(obj.age);
 }

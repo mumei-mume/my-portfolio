@@ -1,16 +1,21 @@
 export function training () {
-  // let a: number = 3;
-  // a++;
-  // console.log(a);
-  // ++a;
-  // console.log(a);
+  let numbers: number[] = [1, 2, 3, 4, 5];
+  let names: string[] = ["Alice", "Bob", "Charlie"];
 
-let a = 3;
-let b: number;
-b = a++;
-console.log(a, b);
+  console.log(numbers[0]); // 1
+  console.log(names[1]); // Bob
 
-a = 3;
-b = ++a;
-console.log(a, b);
+  let score: number[];
+  score = [80, 90, 100];
+
+  let word: string[] = ["sand", "cat", "dog"];
+  console.log(word[1]);
+
+  const array = [40, 30, 20, 10];
+  console.log(array.length); // 4
+
+  console.log(array.includes(10)); // true
+  console.log(array.includes(500)); // false
+
 }
+

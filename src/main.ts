@@ -13,3 +13,4 @@ import { whether } from './whether.ts';
 // ex5();
 // training();
 whether();
+
