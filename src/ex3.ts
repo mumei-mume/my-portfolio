@@ -4,6 +4,9 @@ export function ex3() {
 // 数値の配列 numbers を作成し、要素を 3 つ追加してください。
 
 const numbers:number[] =[1, 2, 3];
+numbers.push(4);
+numbers.push(5);
+numbers.push(6);
 console.log(numbers);
 
 // 4.1.2
